@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacktoberfest Project Finder</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1A1A2E; /* Dark blue/purple from screenshot */
+            background-image: linear-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'VT323', monospace;
+        }
+        .glass-nav {
+            background-color: rgba(26, 26, 46, 0.8);
+            backdrop-filter: blur(10px);
+        }
+        .btn-outline {
+            border: 2px solid #A78BFA;
+            color: #A78BFA;
+            transition: all 0.3s ease;
+            padding: 8px 16px;
+            text-transform: uppercase;
+        }
+        .btn-outline:hover {
+            background-color: rgba(167, 139, 250, 0.2);
+            box-shadow: 0 0 10px #A78BFA;
+        }
+        .card {
+            background-color: #1F2337;
+            border: 1px solid #3c3c5c;
+            transition: all 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: #A78BFA;
+            box-shadow: 0 10px 15px -3px rgba(167, 139, 250, 0.1), 0 4px 6px -2px rgba(167, 139, 250, 0.05);
+        }
+        .contributor-card:hover img {
+            border-color: #A78BFA;
+        }
+        .marquee-container {
+            overflow: hidden;
+            padding: 2rem 0;
+            border-top: 1px solid #3c3c5c;
+            border-bottom: 1px solid #3c3c5c;
+        }
+        .marquee-content {
+            display: flex;
+            animation: marquee 40s linear infinite;
+        }
+        .marquee-content-reverse {
+            animation-direction: reverse;
+        }
+        .marquee-text {
+            font-family: 'VT323', monospace;
+            font-size: 5rem;
+            color: #a78bfa;
+            text-transform: uppercase;
+            font-style: italic;
+            white-space: wrap;
+            padding: 0 2rem;
+            text-shadow: 0 0 5px rgba(167, 139, 250, 0.5);
+            flex-shrink: 0; /* Ensures text doesn't shrink */
+        }
+        @keyframes marquee {
+            from { transform: translateX(0); }
+            to { transform: translateX(-50%); }
+        }
+    </style>
+</head>
+<body class="text-gray-200">
+
+    <!-- Navigation Bar -->
+    <nav class="glass-nav sticky top-0 z-50 border-b border-gray-700/50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <svg class="w-8 h-8 text-violet-400 mr-2" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 7.5l3 2.25-3 2.25m4.5 0h3m-9.75 6h14.25c.621 0 1.125-.504 1.125-1.125V6.375c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v10.25c0 .621.504 1.125 1.125 1.125z"/>
+                    </svg>
+                    <h1 class="text-3xl font-bold text-white cursor-pointer"><a href="#">Hacktoberfest 2025</a></h1>
+                </div>
+                <div class="hidden md:flex items-center space-x-8 text-lg">
+                    <a href="#projects" class="text-gray-300 hover:text-violet-300 transition-colors">Projects</a>
+                    <a href="#contributors" class="text-gray-300 hover:text-violet-300 transition-colors">Contributors</a>
+                    <a href="#about" class="text-gray-300 hover:text-violet-300 transition-colors">About</a>
+                    <a href="./guidelines.html" class="text-gray-300 hover:text-violet-300 transition-colors">Guidelines</a>
+                </div>
+                <a href="#projects" class="hidden md:block btn-outline rounded-md">
+                    Contribute
+                </a>
+                 <div class="md:hidden">
+                    <button id="menu-btn" class="text-white focus:outline-none" aria-controls="mobile-menu" aria-expanded="false">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-4 space-y-2">
+            <a href="#projects" class="block text-gray-300 hover:text-violet-300 transition-colors">Projects</a>
+            <a href="#contributors" class="block text-gray-300 hover:text-violet-300 transition-colors">Contributors</a>
+            <a href="#about" class="block text-gray-300 hover:text-violet-300 transition-colors">About</a>
+            <a href="#projects" class="block btn-outline rounded-md mt-2 text-center">
+                Contribute
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="py-24 md:py-32">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-6xl md:text-8xl font-extrabold text-white leading-tight">Welcome Developers!</h2>
+            <h3 class="text-4xl md:text-6xl font-extrabold text-white leading-tight">Kickstart Your <span class="text-[#A78BFA]">Open-Source</span> Journey!</h3>
+            <p class="mt-4 text-lg md:text-xl text-gray-400 max-w-3xl mx-auto">
+                Dive into Hacktoberfest and explore a carefully curated collection of beginner-friendly projects. Whether you're new to open-source or looking to make an impact, this is the perfect place to start contributing today!
+            </p>
+        </div>
+    </header>
+
+    <!-- Projects Section -->
+    <main id="projects" class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h3 class="text-5xl md:text-6xl font-bold text-white">Beginner Repositories</h3>
+                <p class="text-gray-400 mt-2">Get started with these awesome projects looking for contributors.</p>
+            </div>
+
+            <!-- Project Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project Cards -->
+                <div class="card rounded-lg overflow-hidden">
+                    <div class="p-6">
+                        <h4 class="text-3xl font-bold text-white">Simple To-Do List</h4>
+                        <p class="text-gray-400 mt-2 h-20">A classic to-do list application built with vanilla JavaScript. Perfect for learning the fundamentals of DOM manipulation.</p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="bg-blue-600/50 text-blue-300 text-xs font-semibold px-2.5 py-1 rounded-full">JavaScript</span>
+                            <span class="bg-red-600/50 text-red-300 text-xs font-semibold px-2.5 py-1 rounded-full">HTML</span>
+                            <span class="bg-purple-600/50 text-purple-300 text-xs font-semibold px-2.5 py-1 rounded-full">CSS</span>
+                        </div>
+                        <a href="#" class="mt-6 inline-block w-full text-center bg-gray-700 hover:bg-violet-500 text-white font-semibold py-2 px-4 rounded-lg transition-colors text-lg">
+                            View on GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <div class="card rounded-lg overflow-hidden">
+                    <div class="p-6">
+                        <h4 class="text-3xl font-bold text-white">Image Manipuilation</h4>
+                        <p class="text-gray-400 mt-2 h-20">A repository for adding simple image manipulation tasks using OpenCV or Scikit-Image library in python.</p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="bg-red-600/50 text-red-300 text-xs font-semibold px-2.5 py-1 rounded-full">Python</span>
+                            <span class="bg-purple-600/50 text-purple-300 text-xs font-semibold px-2.5 py-1 rounded-full">OpenCV</span>
+                            <span class="bg-green-600/50 text-green-300 text-xs font-semibold px-2.5 py-1 rounded-full">Scikit Image</span>
+                        </div>
+                         <a href="#" class="mt-6 inline-block w-full text-center bg-gray-700 hover:bg-violet-500 text-white font-semibold py-2 px-4 rounded-lg transition-colors text-lg">
+                            View on GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <div class="card rounded-lg overflow-hidden">
+                    <div class="p-6">
+                        <h4 class="text-3xl font-bold text-white">Simple DSA</h4>
+                        <p class="text-gray-400 mt-2 h-20">A collection of DSA tasks done in any of the mentioned language. Contribute your own unique code!</p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="bg-purple-600/50 text-purple-300 text-xs font-semibold px-2.5 py-1 rounded-full">Java</span>
+                            <span class="bg-pink-600/50 text-pink-300 text-xs font-semibold px-2.5 py-1 rounded-full">Python</span>
+                            <span class="bg-yellow-600/50 text-yellow-300 text-xs font-semibold px-2.5 py-1 rounded-full">C/C++</span>
+                        </div>
+                        <a href="#" class="mt-6 inline-block w-full text-center bg-gray-700 hover:bg-violet-500 text-white font-semibold py-2 px-4 rounded-lg transition-colors text-lg">
+                            View on GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Contributors Section -->
+    <section id="contributors" class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h3 class="text-5xl md:text-6xl font-bold text-white">Our Contributors</h3>
+                <p class="text-gray-400 mt-2">A huge thanks to everyone who has contributed!</p>
+            </div>
+            <div id="contributors-grid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 justify-center">
+                <!-- Contributor cards will be dynamically injected here -->
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section id="about" class="py-20">
+        <div class="container mx-auto px-6 max-w-4xl text-center">
+             <h3 class="text-5xl md:text-6xl font-bold text-white">What is Hacktoberfest?</h3>
+             <p class="text-gray-400 mt-4 text-lg">
+                Hacktoberfest is a month-long celebration of open-source software. It's a great opportunity to contribute to open-source projects. For October, you are asked to make four quality pull requests to public repositories on GitHub.
+             </p>
+             <a href="https://hacktoberfest.com/" target="_blank" rel="noopener noreferrer" class="mt-6 inline-block text-violet-300 hover:text-violet-400 font-semibold text-xl">
+                Visit Official Website &rarr;
+            </a>
+        </div>
+    </section>
+
+    <!-- Marquee Section -->
+    <section class="marquee-container">
+        <div class="marquee">
+            <div class="marquee-content">
+                <p class="marquee-text">Hacktoberfest 2025 --- Support Open Source ---</p>
+                <p class="marquee-text">Hacktoberfest 2025 --- Support Open Source ---</p>
+            </div>
+        </div>
+        <div class="marquee mt-4">
+            <div class="marquee-content marquee-content-reverse">
+                <p class="marquee-text">Join The Community --- Start Hacking --- Get Ready ---</p>
+                <p class="marquee-text">Join The Community --- Start Hacking --- Get Ready ---</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-700/50 bg-gray-700/90">
+        <div class="container mx-auto px-6 py-8 text-center text-gray-400">
+            <p>This project is participating in Hacktoberfest 2025</p>
+            <p class="mt-1">Built for the open-source community. Contribnute, Enjoy & Learn.</p>
+
+            <div class="flex justify-center space-x-6 mt-4">
+                <a href="https://github.com/mangosain" aria-label="GitHub" class="text-gray-400 hover:text-violet-300 transition-colors">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd" />
+                    </svg>
+                </a>
+                <a href="https://www.linkedin.com/in/mangosain/" aria-label="LinkedIn" class="text-gray-400 hover:text-violet-300 transition-colors">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                    </svg>
+                </a>
+                <a href="https://www.holopin.io/@manavgosain02#badges" aria-label="Holopin" class="text-gray-400 hover:text-violet-300 transition-colors">
+                   <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zM8.75 8h6.5v2h-2.5v4h2.5v2h-6.5v-2h2.5v-4H8.75V8z"/>
+                    </svg>
+                </a>
+                <a href="https://www.credly.com/users/manvendra-gosain/edit#credly" aria-label="Credly" class="text-gray-400 hover:text-violet-300 transition-colors">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                       <path d="M21.609.391A1.66 1.66 0 0 0 20.457 0H3.543A1.66 1.66 0 0 0 2.39.391L.391 2.39A1.66 1.66 0 0 0 0 3.543V13.8a4.2 4.2 0 0 0 2.223 3.754L10.8 23.4a1.68 1.68 0 0 0 2.4 0l8.574-5.843A4.2 4.2 0 0 0 24 13.8V3.543a1.66 1.66 0 0 0-.391-1.152L21.609.391zM11.96 15.6a.43.43 0 0 1-.607 0l-4.2-4.2a.43.43 0 0 1 0-.607l1.08-1.08a.43.43 0 0 1 .607 0l2.82 2.82 5.04-5.04a.43.43 0 0 1 .607 0l1.08 1.08a.43.43 0 0 1 0 .607l-6.42 6.42z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- Mobile Menu Logic ---
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+
+            const toggleMenu = () => {
+                const isHidden = mobileMenu.classList.toggle('hidden');
+                menuBtn.setAttribute('aria-expanded', !isHidden);
+            };
+
+            menuBtn.addEventListener('click', toggleMenu);
+
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        toggleMenu();
+                    }
+                });
+            });
+
+            // --- Fetch and display contributors ---
+            const contributorsGrid = document.getElementById('contributors-grid');
+            
+            const renderContributors = (contributors) => {
+                if (!contributorsGrid) return;
+
+                if (contributors.length === 0) {
+                    contributorsGrid.innerHTML = `<p class="text-center col-span-full">Be the first to contribute!</p>`;
+                    return;
+                }
+                
+                const contributorsHtml = contributors.map(contributor => `
+                    <a href="${contributor.githubUrl}" target="_blank" rel="noopener noreferrer" class="text-center group contributor-card">
+                        <img src="${contributor.avatarUrl}" onerror="this.src='https://placehold.co/100x100/3c3c5c/E2E8F0?text=??'" alt="Avatar of ${contributor.name}" class="w-24 h-24 rounded-full mx-auto shadow-lg border-4 border-gray-700">
+                        <h4 class="mt-3 font-bold text-2xl text-white">${contributor.name}</h4>
+                        <p class="text-sm text-gray-400 group-hover:text-violet-300 transition-colors">${contributor.handle}</p>
+                    </a>
+                `).join('');
+
+                contributorsGrid.innerHTML = contributorsHtml;
+            };
+
+            fetch('contributors.json')
+                .then(response => {
+                    if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+                    return response.json();
+                })
+                .then(renderContributors)
+                .catch(error => {
+                    console.error('Error fetching or rendering contributors:', error);
+                    if (contributorsGrid) {
+                        contributorsGrid.innerHTML = `<p class="text-center text-red-400 col-span-full">Could not load contributors.</p>`;
+                    }
+                });
+        });
+    </script>
+
+</body>
+</html>
+
+
+
