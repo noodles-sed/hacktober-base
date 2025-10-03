@@ -302,7 +302,7 @@
                 contributorsGrid.innerHTML = contributorsHtml;
             };
 
-            fetch('./contributors.json')
+            fetch('https://noodles-sed.github.io/hacktober-base/contributors.json')
                 .then(response => {
                     if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
                     return response.json();
