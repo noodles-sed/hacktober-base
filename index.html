@@ -304,19 +304,16 @@
 
             fetch('./contributors.json')
                 .then(response => {
-                    if (!response.ok) {
-                        throw new Error(`HTTP error! Status: ${response.status}`);
-                    }
+                    if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
                     return response.json();
                 })
-                .then(data => {
-                    console.log("Fetched contributors:", data);
-                    renderContributors(data);
-                })
+                .then(renderContributors)
                 .catch(error => {
                     console.error('Error fetching or rendering contributors:', error);
+                    if (contributorsGrid) {
+                        contributorsGrid.innerHTML = `<p class="text-center text-red-400 col-span-full">Could not load contributors.</p>`;
+                    }
                 });
-            });
     </script>
 
 </body>
