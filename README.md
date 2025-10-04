@@ -2,7 +2,7 @@
 
 Welcome to the **Hacktoberfest Project Finder 2025** – a retro-themed, beginner-friendly landing page designed to help you find open-source projects to contribute to during Hacktoberfest. Whether you're just starting out or are a seasoned contributor, this is your central hub for discovering cool repos and getting recognized on our **Contributors' Wall**.
 
-> 🔗 [Live Site Coming Soon!]()
+> 🔗 [Live Site!](https://noodles-sed.github.io/hacktober-base/)
 
 ---
 
