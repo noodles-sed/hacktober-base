@@ -16,8 +16,7 @@
         "handle": "@Benji918",
         "githubUrl": "https://github.com/Benji918",
         "avatarUrl": "https://avatars.githubusercontent.com/u/70521283?s=400&u=b724a82699f330c20d7bed4e09e7ad6f95f9d463&v=4"
-    }
-    ,
+    },
     {
         "name": "Parichay Madnani",
         "handle": "@parichay29",
@@ -41,8 +40,7 @@
         "handle": "@KRlPER",
         "githubUrl": "https://github.com/KRlPER",
         "avatarUrl": "https://avatars.githubusercontent.com/u/190787025?s=400&u=7d2d69c68030d4cf32e22e61ce730a182db1df42&v=4"
-    }
-    ,
+    },
     {
        "name": "Shubham Arya",
        "handle": "shubhamarya406",
@@ -51,10 +49,16 @@
 
     },
     {
-  "name": "Mrigakshi Rathore",
-  "handle": "@Mrigakshi-Rathore",
-  "githubUrl": "https://github.com/Mrigakshi-Rathore",
-  "avatarUrl": "https://github.com/Mrigakshi-Rathore.png"
-  
-}
+      "name": "Mrigakshi Rathore",
+      "handle": "@Mrigakshi-Rathore",
+      "githubUrl": "https://github.com/Mrigakshi-Rathore",
+      "avatarUrl": "https://github.com/Mrigakshi-Rathore.png"
+
+    },
+    {
+       "name": "Anuransh Srivastava",
+       "handle": "@Anuransh8",
+       "githubUrl": "https://github.com/Anuransh8",
+       "avatarUrl": "https://avatars.githubusercontent.com/u/198600441?v=4"
+    }
 ]
