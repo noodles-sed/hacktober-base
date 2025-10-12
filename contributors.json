@@ -1,119 +1,122 @@
 [
-    {
-        "name": "Noodles",
-        "handle": "@noodles-sed",
-        "githubUrl": "https://github.com/noodles-sed",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/184601631?v=4"
-    },
-    {
-        "name": "Manav Gosain",
-        "handle": "@mangosain",
-        "githubUrl": "https://github.com/mangosain",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/55010455?v=4"
-    },
-    {
-        "name": "Benjamin Ugochukwu",
-        "handle": "@Benji918",
-        "githubUrl": "https://github.com/Benji918",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/70521283?s=400&u=b724a82699f330c20d7bed4e09e7ad6f95f9d463&v=4"
-    },
-    {
-        "name": "Parichay Madnani",
-        "handle": "@parichay29",
-        "githubUrl": "https://https://github.com/parichay29",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/47267214?s=400&u=a3f043b3e1a2e6d9a633bf730d5a8c22dbe30b73&v=4"
-    },
-    {
-        "name": "Varad Dhoke",
-        "handle": "@TickleFuse09",
-        "githubUrl": "https://github.com/TickleFuse09",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/161567080?v=4"
-    },
-    {
-        "name": "Gaurav Girkar",
-        "handle": "@GauravGirkar",
-        "githubUrl": "https://github.com/GauravGirkar",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/180052679?v=4"
-    },
-        {
-        "name": "Jaysmit Chaudhari",
-        "handle": "@KRlPER",
-        "githubUrl": "https://github.com/KRlPER",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/190787025?s=400&u=7d2d69c68030d4cf32e22e61ce730a182db1df42&v=4"
-    },
-    {
-       "name": "Shubham Arya",
-       "handle": "shubhamarya406",
-       "githubUrl": "https://github.com/shubhamarya406",
-       "avatarUrl": "https://avatars.githubusercontent.com/u/42767393?v=4"
-
-    },
-    {
+   {
+      "name": "Noodles",
+      "handle": "@noodles-sed",
+      "githubUrl": "https://github.com/noodles-sed",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/184601631?v=4"
+   },
+   {
+      "name": "Manav Gosain",
+      "handle": "@mangosain",
+      "githubUrl": "https://github.com/mangosain",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/55010455?v=4"
+   },
+   {
+      "name": "Benjamin Ugochukwu",
+      "handle": "@Benji918",
+      "githubUrl": "https://github.com/Benji918",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/70521283?s=400&u=b724a82699f330c20d7bed4e09e7ad6f95f9d463&v=4"
+   },
+   {
+      "name": "Parichay Madnani",
+      "handle": "@parichay29",
+      "githubUrl": "https://https://github.com/parichay29",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/47267214?s=400&u=a3f043b3e1a2e6d9a633bf730d5a8c22dbe30b73&v=4"
+   },
+   {
+      "name": "Varad Dhoke",
+      "handle": "@TickleFuse09",
+      "githubUrl": "https://github.com/TickleFuse09",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/161567080?v=4"
+   },
+   {
+      "name": "Gaurav Girkar",
+      "handle": "@GauravGirkar",
+      "githubUrl": "https://github.com/GauravGirkar",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/180052679?v=4"
+   },
+   {
+      "name": "Jaysmit Chaudhari",
+      "handle": "@KRlPER",
+      "githubUrl": "https://github.com/KRlPER",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/190787025?s=400&u=7d2d69c68030d4cf32e22e61ce730a182db1df42&v=4"
+   },
+   {
+      "name": "Shubham Arya",
+      "handle": "shubhamarya406",
+      "githubUrl": "https://github.com/shubhamarya406",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/42767393?v=4"
+   },
+   {
       "name": "Mrigakshi Rathore",
       "handle": "@Mrigakshi-Rathore",
       "githubUrl": "https://github.com/Mrigakshi-Rathore",
       "avatarUrl": "https://github.com/Mrigakshi-Rathore.png"
-
-    },
-    {
-       "name": "Anuransh Srivastava",
-       "handle": "@Anuransh8",
-       "githubUrl": "https://github.com/Anuransh8",
-       "avatarUrl": "https://avatars.githubusercontent.com/u/198600441?v=4"
-    },
-    {
-       "name": "Shivam Sirsat",
-       "handle": "@Unknown-Shiva",
-       "githubUrl": "https://github.com/Unknown-Shiva",
-       "avatarUrl": "https://avatars.githubusercontent.com/u/177655852?s=400&v=4"
-    },
-    {
-       "name": "Ayush Yadav",
-       "handle": "AyushYadav256",
-       "githubUrl": "https://github.com/AyushYadav256",
-       "avatarUrl": "https://avatars.githubusercontent.com/u/192902556?s=400&v=4"
-    },
-    {
-       "name": "Ramchandar K G",
-       "handle": "ramchandarkg",
-       "githubUrl": "https://github.com/ramchandarkg",
-       "avatarUrl": "https://avatars.githubusercontent.com/u/55615436?s=96&v=4"
-
-    },
-    {
-       "name": "Deepak Pancholi",
-       "handle": "@Deepak9521",
-       "githubUrl": "https://github.com/Deepak9521",
-       "avatarUrl": "https://avatars.githubusercontent.com/u/163425955?v=4"
-    }, 
-    {
-       "name": "Nitish Songara",
-       "handle": "@sonu7089",
-       "githubUrl": "https://github.com/sonu7089",
-       "avatarUrl": "https://avatars.githubusercontent.com/u/49278676?v=4"
-    },
-    {
-       "name": "samarajit mane",
-       "handle": "@samarajit",
-       "avatarUrl": "https://avatars.githubusercontent.com/u/232219122?v=4",
-       "githubUrl": "https://github.com/samarajit"
-    },
-    {
-       "name": "anshika agarwal",
-       "handle": "@anshika361",
-       "avatarUrl": "https://avatars.githubusercontent.com/u/76562031?v=4",
-       "githubUrl": "https://github.com/anshika361"
-    },
-      {
-  "name": "Swetha C",
-  "handle": "@SWETHACS17",
-  "avatarUrl": "https://github.com/SWETHACS17.png",
-  "githubUrl": "https://github.com/SWETHACS17"
-},
-{
-     "name": "Nikhil Meena",
-       "handle": "@Nicknack03",
-       "avatarUrl": "https://avatars.githubusercontent.com/u/80182849?v=4",
-       "githubUrl": "https://github.com/Nicknack03"
-}
+   },
+   {
+      "name": "Anuransh Srivastava",
+      "handle": "@Anuransh8",
+      "githubUrl": "https://github.com/Anuransh8",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/198600441?v=4"
+   },
+   {
+      "name": "Shivam Sirsat",
+      "handle": "@Unknown-Shiva",
+      "githubUrl": "https://github.com/Unknown-Shiva",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/177655852?s=400&v=4"
+   },
+   {
+      "name": "Ayush Yadav",
+      "handle": "AyushYadav256",
+      "githubUrl": "https://github.com/AyushYadav256",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/192902556?s=400&v=4"
+   },
+   {
+      "name": "Ramchandar K G",
+      "handle": "ramchandarkg",
+      "githubUrl": "https://github.com/ramchandarkg",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/55615436?s=96&v=4"
+   },
+   {
+      "name": "Deepak Pancholi",
+      "handle": "@Deepak9521",
+      "githubUrl": "https://github.com/Deepak9521",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/163425955?v=4"
+   },
+   {
+      "name": "Nitish Songara",
+      "handle": "@sonu7089",
+      "githubUrl": "https://github.com/sonu7089",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/49278676?v=4"
+   },
+   {
+      "name": "samarajit mane",
+      "handle": "@samarajit",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/232219122?v=4",
+      "githubUrl": "https://github.com/samarajit"
+   },
+   {
+      "name": "anshika agarwal",
+      "handle": "@anshika361",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/76562031?v=4",
+      "githubUrl": "https://github.com/anshika361"
+   },
+   {
+      "name": "Swetha C",
+      "handle": "@SWETHACS17",
+      "avatarUrl": "https://github.com/SWETHACS17.png",
+      "githubUrl": "https://github.com/SWETHACS17"
+   },
+   {
+      "name": "Nikhil Meena",
+      "handle": "@Nicknack03",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/80182849?v=4",
+      "githubUrl": "https://github.com/Nicknack03"
+   },
+   {
+      "name": "Suvojit Modak",
+      "handle": "@SuvojitDev",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/47207810?v=4",
+      "githubUrl": "https://github.com/SuvojitDev"
+   }
 ]
