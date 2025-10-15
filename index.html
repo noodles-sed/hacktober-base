@@ -191,7 +191,7 @@
           >Projects</a
         >
         <a href="./guidelines.html"
-           class="text-gray-300 hover:text-violet-300 transition-colors"
+           class="block text-gray-300 hover:text-violet-300 transition-colors"
         >Guidelines</a
         >
         <a
@@ -654,7 +654,7 @@
           });
       });
     </script>
-    
+
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         const scrollTopBtn = document.getElementById("scrollTopBtn");
@@ -679,6 +679,59 @@
             behavior: "smooth",
           });
         });
+        // Get all nav links (both desktop and mobile)
+        const allLinks = document.querySelectorAll(
+          'nav a[href^="#"], #mobile-menu a[href^="#"]'
+        );
+
+        // Function to clear active styles
+        function clearActive() {
+          allLinks.forEach(link =>
+            link.classList.remove("text-violet-300", "font-bold")
+          );
+        }
+
+        // Function to set active link based on hash
+        function setActiveLinkFromHash() {
+          const hash = window.location.hash;
+          clearActive(); // Always clear first
+
+          if (!hash) return; // No hash = no highlight
+
+          // Select all matching links (desktop & mobile)
+          const activeLinks = document.querySelectorAll(
+            `a[href="${hash}"]`
+          );
+
+          activeLinks.forEach(link => {
+            link.classList.add("text-violet-300", "font-bold");
+          });
+        }
+
+        // Run once when page loads
+        setActiveLinkFromHash();
+
+      // Update when hash changes (like scrolling or clicking)
+      window.addEventListener("hashchange", setActiveLinkFromHash);
+
+      // Update on click (helps if scrolling is JS-based or smooth)
+      allLinks.forEach(link => {
+        link.addEventListener("click", () => {
+            clearActive();
+            link.classList.add("text-violet-300", "font-bold");
+        });
+      });
+
+      // Handle clicking the logo (like "Quiver 2025") to clear highlight
+      const logoLink = document.querySelector('a[href="#"], a[href="index.html"], a[href="./"]');
+      if (logoLink) {
+        logoLink.addEventListener("click", e => {
+          e.preventDefault(); // prevent instant jump
+          clearActive();
+          window.scrollTo({ top: 0, behavior: "smooth" });
+          history.replaceState(null, "", " "); // clear hash from URL
+        });
+      }
       });
     </script>
   </body>
