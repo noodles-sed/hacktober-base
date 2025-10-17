@@ -67,6 +67,15 @@
       .contributor-card:hover img {
         border-color: #a78bfa;
       }
+      .guideline-item {
+        border-bottom: 1px solid #3c3c5c;
+        padding-bottom: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
+      .guideline-item:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+      }
       .marquee-container {
         overflow: hidden;
         padding: 2rem 0;
@@ -146,7 +155,7 @@
               >About</a
             >
             <a
-              href="./guidelines.html"
+              href="#guidelines"
               class="text-gray-300 hover:text-violet-300 transition-colors"
               >Guidelines</a
             >
@@ -190,10 +199,6 @@
           class="block text-gray-300 hover:text-violet-300 transition-colors"
           >Projects</a
         >
-        <a href="./guidelines.html"
-           class="block text-gray-300 hover:text-violet-300 transition-colors"
-        >Guidelines</a
-        >
         <a
           href="#contributors"
           class="block text-gray-300 hover:text-violet-300 transition-colors"
@@ -203,6 +208,10 @@
           href="#about"
           class="block text-gray-300 hover:text-violet-300 transition-colors"
           >About</a
+        >
+        <a href="#guidelines"
+           class="block text-gray-300 hover:text-violet-300 transition-colors"
+        >Guidelines</a
         >
         <a
           href="#projects"
@@ -458,6 +467,92 @@
         >
           Visit Official Website &rarr;
         </a>
+      </div>
+    </section>
+    
+    <section id="guidelines" class="py-20">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-6xl md:text-8xl font-extrabold text-white leading-tight">Guidelines</h2>
+          <p class="mt-4 text-lg md:text-xl text-gray-400 max-w-3xl mx-auto">
+            The official rules and values for Hacktoberfest 2025. Follow these to ensure a great experience for everyone.
+          </p>
+        </div>
+
+        <div class="max-w-4xl mx-auto">
+          <!-- Guideline Item -->
+          <div class="guideline-item flex items-start space-x-6">
+            <div class="flex-shrink-0">
+              <svg class="w-12 h-12 text-violet-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-4xl font-bold text-white">Four Quality Contributions</h3>
+              <p class="text-gray-400 mt-2 text-lg">
+                To complete the challenge, you must make four quality pull requests (PRs) to any participating public repository on GitHub. Quality is key; contributions that are automated, disruptive, or hinder the project will be marked as invalid.
+              </p>
+            </div>
+          </div>
+
+          <!-- Guideline Item -->
+          <div class="guideline-item flex items-start space-x-6">
+            <div class="flex-shrink-0">
+              <svg class="w-12 h-12 text-violet-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-4xl font-bold text-white">October 1-31</h3>
+              <p class="text-gray-400 mt-2 text-lg">
+                All pull requests must be submitted between October 1st and October 31st in any time zone. PRs made before or after this window will not count towards your Hacktoberfest goal.
+              </p>
+            </div>
+          </div>
+
+          <!-- Guideline Item -->
+          <div class="guideline-item flex items-start space-x-6">
+            <div class="flex-shrink-0">
+              <svg class="w-12 h-12 text-violet-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M14.25 9.75L16.5 12l-2.25 2.25m-4.5 0L7.5 12l2.25-2.25M6 20.25h12A2.25 2.25 0 0020.25 18V6A2.25 2.25 0 0018 3.75H6A2.25 2.25 0 003.75 6v12A2.25 2.25 0 006 20.25z" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-4xl font-bold text-white">Participating Repositories</h3>
+              <p class="text-gray-400 mt-2 text-lg">
+                Your contributions must be made to repositories with the `hacktoberfest` topic. Maintainers can opt-in to participate. PRs to repositories not participating in Hacktoberfest will not be counted.
+              </p>
+            </div>
+          </div>
+          <!-- Guideline Item -->
+          <div class="guideline-item flex items-start space-x-6">
+            <div class="flex-shrink-0">
+              <svg class="w-12 h-12 text-violet-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-4xl font-bold text-white">Be Respectful</h3>
+              <p class="text-gray-400 mt-2 text-lg">
+                Follow the project's code of conduct and contribution guidelines. Be respectful and constructive in your interactions with maintainers and other contributors. Community is at the heart of open source.
+              </p>
+            </div>
+          </div>
+
+          <div class="guideline-item flex items-start space-x-6">
+            <div class="flex-shrink-0">
+              <svg class="w-12 h-12 text-violet-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-4xl font-bold text-white">Remember to update the Contributor list</h3>
+              <p class="text-gray-400 mt-2 text-lg">
+                Be sure to update the contributors.json in the root directory of this website's repository after contributing to any of the mentioned repositories.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
